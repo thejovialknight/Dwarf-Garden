@@ -9,31 +9,39 @@ public class MapGenerator : MonoBehaviour
         TileManager tiles = TileManager.Instance;
         MapGenerationSettings settings = tiles.mapSettings;
 
-        float seed = Random.Range(-1000f, 1000f);
+        float[,] stoneMap = GenerateNoiseMap(settings.seedMultiplier, settings);
+        float[,] moistureMap = GenerateNoiseMap(settings.moistureScale, settings);
 
-        float[,] noiseMap = new float[tiles.mapWidth, tiles.mapHeight];
-        for (int x = 0; x <= noiseMap.GetLength(0); x++)
+        tiles.grid = new Grid(settings.width, settings.height);
+        for(int x = 0; x < tiles.grid.Width(); x++)
         {
-            for(int y = 0; y <= noiseMap.GetLength(1); y++)
+            for(int y = 0; y < tiles.grid.Height(); y++)
             {
-                noiseMap[x, y] = Mathf.PerlinNoise(seed, seed);
-            }
-        }
-
-        tiles.grid = new Grid(tiles.mapWidth, tiles.mapHeight);
-        for(int x = 0; x <= tiles.grid.Width(); x++)
-        {
-            for(int y = 0; y <= tiles.grid.Height(); y++)
-            {
-                if (noiseMap[x, y] <= settings.stoneChance)
+                GridSpace space;
+                if (stoneMap[x, y] <= settings.stoneChance)
                 {
-                    TileManager.Instance.PlaceTile(x, y, Tile.Ground);
+                    space = TileManager.Instance.PlaceTile(x, y, Tile.Stone);
                 }
                 else
                 {
-                    TileManager.Instance.PlaceTile(x, y, Tile.Stone);
+                    space = TileManager.Instance.PlaceTile(x, y, Tile.Ground);
                 }
+                space.SetMoisture(moistureMap[x, y]);
             }
         }
+    }
+
+    public float[,] GenerateNoiseMap(float multiplier, MapGenerationSettings settings)
+    {
+        float seed = Random.Range(-1000f, 1000f);
+        float[,] noiseMap = new float[settings.width, settings.height];
+        for (int x = 0; x < noiseMap.GetLength(0); x++)
+        {
+            for (int y = 0; y < noiseMap.GetLength(1); y++)
+            {
+                noiseMap[x, y] = Mathf.PerlinNoise(x + seed * multiplier, y + seed * multiplier);
+            }
+        }
+        return noiseMap;
     }
 }

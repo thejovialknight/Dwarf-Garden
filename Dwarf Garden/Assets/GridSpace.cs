@@ -8,21 +8,28 @@ public class GridSpace
 {
     public int x;
     public int y;
+    public float moisture = 0.5f;
     public GameObject tile;
     public List<Entity> entities = new List<Entity>();
 
-    public GridSpace(GameObject tile, params Entity[] entities)
+    public GridSpace(int x, int y, GameObject tile, params Entity[] entities)
     {
-        this.tile = tile;
+        this.x = x;
+        this.y = y;
+        SetTile(tile);
         this.entities = entities.ToList<Entity>();
+    }
+
+    public void SetMoisture(float moisture)
+    {
+        this.moisture = moisture;
     }
 
     public GameObject SetTile(GameObject tilePrefab)
     {
-        GameObject newTile = GameObject.Instantiate(tilePrefab, tile.transform);
         GameObject.Destroy(tile);
-        tile = newTile;
-        return newTile;
+        tile = GameObject.Instantiate(tilePrefab, new Vector3(x, y, 0), Quaternion.identity);
+        return tile;
     }
 
     public void AddEntity(Entity entity)

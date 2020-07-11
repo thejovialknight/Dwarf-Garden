@@ -30,25 +30,35 @@ public class GameManager : MonoBehaviour
 
         if(File.Exists(Application.persistentDataPath + "/save.dat"))
         {
-            //DeserializeGameData();
+            DeserializeGameData();
         }
         else
         {
             save = new GameData();
-            //SerializeGameData();
+            SerializeGameData();
+        }
+    }
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if(state == GameState.Match)
+        {
+            TileManager.Instance.SetupMatch();
         }
 
         if(state == GameState.Init)
         {
             EnterMenu();
-        }
-    }
-
-    void Start()
-    {
-        if(state == GameState.Match)
-        {
-            TileManager.Instance.SetupMatch();
         }
     }
 

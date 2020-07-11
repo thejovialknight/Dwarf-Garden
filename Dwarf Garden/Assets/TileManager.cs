@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class TileManager : MonoBehaviour
 {
-    public int mapWidth;
-    public int mapHeight;
     public MapGenerationSettings mapSettings;
 
     public Grid grid;
@@ -31,9 +29,19 @@ public class TileManager : MonoBehaviour
         GetComponent<MapGenerator>().GenerateLevel();
     }
 
-    public void PlaceTile(int x, int y, Tile tile)
+    public GridSpace PlaceTile(int x, int y, Tile tile)
     {
-        grid.Space(x, y).SetTile(GetTilePrefab(tile));
+        GridSpace space = grid.Space(x, y);
+        GameObject prefab = GetTilePrefab(tile);
+        if (space != null)
+        {
+            space.SetTile(prefab);
+        }
+        else
+        {
+            space = grid.AddSpace(x, y, new GridSpace(x, y, prefab));
+        }
+        return space;
     }
 
     public GameObject GetTilePrefab(Tile tile)

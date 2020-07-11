@@ -29,4 +29,10 @@ public class Grid
         }
         return null;
     }
+
+    public GridSpace AddSpace(int x, int y, GridSpace space)
+    {
+        grid[x, y] = space;
+        return space;
+    }
 }
