@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3332966593177845645}
   - component: {fileID: -2365616224094557541}
   - component: {fileID: -4294241069852673784}
+  - component: {fileID: -1803231317351162454}
+  - component: {fileID: 6622215659353847536}
   m_Layer: 0
   m_Name: Tile_Stone
   m_TagString: Untagged
@@ -29,8 +31,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3332966593983742905}
   - {fileID: 6925385958097298343}
+  - {fileID: 3332966593983742905}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -60,8 +62,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59c155b2faa8ea243abd2e5078dd288c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  space:
+    x: 0
+    y: 0
+    moisture: 0
+    tile: {fileID: 0}
+    entity: {fileID: 0}
+  moisture: 0
   dryRenderer: {fileID: 3332966593983742904}
   moistRenderer: {fileID: 5581370585618434800}
+--- !u!114 &-1803231317351162454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3332966593177845644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 305e7bac3b7d1434f8087aef5a05201a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6622215659353847536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3332966593177845644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd39a52acb7c4424da715c606a2f740e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3332966593983742907
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,7 +124,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3332966593177845645}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3332966593983742904
 SpriteRenderer:
@@ -172,7 +205,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3332966593177845645}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5581370585618434800
 SpriteRenderer:
@@ -212,7 +245,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 80b04b5acf1261544972d2d92e763fa4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

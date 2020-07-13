@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour
         if(state == GameState.Match)
         {
             TileManager.Instance.SetupMatch();
+            MatchManager.Instance.StartMatch();
         }
 
         if(state == GameState.Init)

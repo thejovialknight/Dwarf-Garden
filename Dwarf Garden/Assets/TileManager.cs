@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class TileManager : MonoBehaviour
 {
+    public int debugX;
+    public int debugY;
+    public GridSpace debugSpace;
+
     public MapGenerationSettings mapSettings;
 
     public Grid grid;
@@ -16,7 +20,6 @@ public class TileManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -24,9 +27,17 @@ public class TileManager : MonoBehaviour
         }
     }
 
+    void Update() {
+        debugSpace = Space(debugX, debugY);
+    }
+
     public void SetupMatch()
     {
         GetComponent<MapGenerator>().GenerateLevel();
+    }
+
+    public GridSpace Space(int x, int y) {
+        return grid.Space(x, y);
     }
 
     public GridSpace PlaceTile(int x, int y, Tile tile)

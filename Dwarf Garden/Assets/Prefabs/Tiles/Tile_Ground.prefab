@@ -29,7 +29,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3464855351953498733}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6218129823077239753
 SpriteRenderer:
@@ -69,7 +69,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 482cafd28428946499ec6d43ee8b9f65, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -110,7 +110,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3464855351953498733}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3464855351687536216
 SpriteRenderer:
@@ -173,6 +173,8 @@ GameObject:
   - component: {fileID: 3464855351953498733}
   - component: {fileID: 1496875025914246767}
   - component: {fileID: -5061452967113951623}
+  - component: {fileID: -2084125659943485894}
+  - component: {fileID: 3692973806983144631}
   m_Layer: 0
   m_Name: Tile_Ground
   m_TagString: Untagged
@@ -191,8 +193,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3464855351687536217}
   - {fileID: 6697801065862298392}
+  - {fileID: 3464855351687536217}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -222,5 +224,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59c155b2faa8ea243abd2e5078dd288c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moisture: 0
   dryRenderer: {fileID: 3464855351687536216}
   moistRenderer: {fileID: 6218129823077239753}
+--- !u!114 &-2084125659943485894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3464855351953498732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b60dbeadb534249adf2e487375542e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3692973806983144631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3464855351953498732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d345e315152f2c4d8f59fe0d5784ac6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -4,20 +4,29 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+[System.Serializable]
 public class GridSpace
 {
     public int x;
     public int y;
     public float moisture = 0.5f;
     public GameObject tile;
-    public List<Entity> entities = new List<Entity>();
+    public GameObject entity;
 
-    public GridSpace(int x, int y, GameObject tile, params Entity[] entities)
+    public GridSpace(int x, int y, GameObject tile, GameObject entity)
     {
         this.x = x;
         this.y = y;
         SetTile(tile);
-        this.entities = entities.ToList<Entity>();
+        this.entity = entity;
+    }
+
+    public GridSpace(int x, int y, GameObject tile)
+    {
+        this.x = x;
+        this.y = y;
+        SetTile(tile);
+        this.entity = null;
     }
 
     public void SetMoisture(float moisture)
@@ -32,13 +41,25 @@ public class GridSpace
         return tile;
     }
 
-    public void AddEntity(Entity entity)
-    {
-        entities.Add(entity);
+    public void AssignEntity(GameObject entity) {
+        this.entity = entity;
     }
 
-    public void RemoveEntity(Entity entity)
-    {
-        entities.Remove(entity);
+    public bool Action(GameObject actor, PlayerController player) {
+        bool isSuccessful = false;
+        IActable actable;
+        if(entity != null) {
+            actable = entity.GetComponent<IActable>();
+            if(actable != null && actable.Action(actor, player)) {
+                return true;
+            }
+        }
+
+        actable = tile.GetComponent<IActable>();
+        if(actable != null && actable.Action(actor, player)) {
+            return true;
+        }
+
+        return isSuccessful;
     }
 }

@@ -15,5 +15,5 @@ MonoBehaviour:
   width: 25
   height: 25
   seedMultiplier: 0.5
-  stoneChance: 0.5
+  stoneChance: 0.4
   moistureScale: 0.5
