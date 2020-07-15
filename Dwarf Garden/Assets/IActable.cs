@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IActable
 {
-    bool Action(GameObject actor, PlayerController player);
+    bool Action(GameObject actor, PlayerController player, bool isSecondary);
 }

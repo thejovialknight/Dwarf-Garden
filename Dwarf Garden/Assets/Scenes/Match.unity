@@ -370,6 +370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dfc5a13f7a980488f7d28b04e0bb9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  power: 1
 --- !u!114 &564901369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -485,6 +486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dfc5a13f7a980488f7d28b04e0bb9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  power: 1
 --- !u!114 &738709580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -527,6 +529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1077051558}
   - component: {fileID: 1077051559}
+  - component: {fileID: 1077051560}
   m_Layer: 0
   m_Name: PlayerController1
   m_TagString: Untagged
@@ -565,6 +568,22 @@ MonoBehaviour:
   units:
   - {fileID: 1354414858}
   - {fileID: 738709580}
+  seeds: {fileID: 0}
+--- !u!114 &1077051560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077051557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 722fbb6f7543cc5449d60948faa6bef3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gems: 0
+  shrooms: 0
+  snails: 0
 --- !u!1 &1238864049
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,6 +797,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dfc5a13f7a980488f7d28b04e0bb9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  power: 1
 --- !u!114 &1354414857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -973,6 +993,7 @@ MonoBehaviour:
   activeUnit: 0
   units:
   - {fileID: 564901369}
+  seeds: {fileID: 0}
 --- !u!1 &2147443882
 GameObject:
   m_ObjectHideFlags: 0

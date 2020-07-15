@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class Planter : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public float power = 1f;
+
+    Unit unit;
+    Animator animator;
+
+    void Awake() {
+        unit = GetComponent<Unit>();
+        animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Plant(PlantableTile plantable, ) {
+        StartCoroutine(AnimatePlant(plantable));
+    }
+
+    IEnumerator AnimatePlant(PlantableTile plantable) 
     {
-        
+        unit.isControllable = false;
+
+        yield return new WaitForSeconds(0.5f);
+
+        unit.isControllable = true;
     }
 }

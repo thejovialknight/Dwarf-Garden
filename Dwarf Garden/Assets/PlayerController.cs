@@ -8,6 +8,12 @@ public class PlayerController : MonoBehaviour
     public int activeUnit;
     public List<Unit> units = new List<Unit>();
 
+    public SeedStorage seeds;
+
+    void Awake() {
+        seeds = GetComponent<SeedStorage>();
+    }
+
     public void StartTurn() {
         activeUnit = -1;
         isActive = true;

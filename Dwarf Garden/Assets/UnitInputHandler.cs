@@ -26,5 +26,9 @@ public class UnitInputHandler : MonoBehaviour
         if(Input.GetButtonDown("Left")) {
             unit.Action(-1, 0);
         }
+
+        if(Input.GetButtonDown("Secondary")) {
+            unit.Action(0, 0, true);
+        }
     }
 }

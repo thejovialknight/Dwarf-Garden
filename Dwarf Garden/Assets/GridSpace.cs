@@ -45,18 +45,18 @@ public class GridSpace
         this.entity = entity;
     }
 
-    public bool Action(GameObject actor, PlayerController player) {
+    public bool Action(GameObject actor, PlayerController player, bool isSecondary) {
         bool isSuccessful = false;
         IActable actable;
         if(entity != null) {
             actable = entity.GetComponent<IActable>();
-            if(actable != null && actable.Action(actor, player)) {
+            if(actable != null && actable.Action(actor, player, isSecondary)) {
                 return true;
             }
         }
 
         actable = tile.GetComponent<IActable>();
-        if(actable != null && actable.Action(actor, player)) {
+        if(actable != null && actable.Action(actor, player, isSecondary)) {
             return true;
         }
 

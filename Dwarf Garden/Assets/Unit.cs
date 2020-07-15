@@ -39,7 +39,7 @@ public class Unit : MonoBehaviour
         isActive = false;
     }
 
-    public void Action(int x, int y) {
+    public void Action(int x, int y, bool isSecondary) {
         int xPos = (int)transform.position.x + x;
         int yPos = (int)transform.position.y + y;
 
@@ -47,10 +47,14 @@ public class Unit : MonoBehaviour
             return;
         }
 
-        if(TileManager.Instance.Space(xPos, yPos).Action(gameObject, controller)) {
+        if(TileManager.Instance.Space(xPos, yPos).Action(gameObject, controller, true)) {
             isActionInProgress = true;
         }
 
         Input.ResetInputAxes();
+    }
+
+    public void Action(int x, int y) {
+        Action(x, y, false);
     }
 }

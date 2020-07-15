@@ -10,7 +10,9 @@ public class GroundTile : MonoBehaviour, IActable
         moveable = GetComponent<MoveableTile>();
     }
 
-    public bool Action(GameObject actor, PlayerController player) {
+    public bool Action(GameObject actor, PlayerController player, bool isSecondary) {
+        
+
         if(moveable.Move(actor)) {
             return true;
         }
