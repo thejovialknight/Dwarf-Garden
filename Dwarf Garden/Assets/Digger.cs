@@ -14,11 +14,20 @@ public class Digger : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    public void Dig(DiggableTile diggable) {
-        StartCoroutine(AnimateDig(diggable));
+    public bool Dig(GridSpace space) {
+        GameObject obj;
+        if(space.Action(ActionType.Dig, out obj)) {
+            DiggableTile diggable = obj.GetComponent<DiggableTile>();
+            if(diggable != null) {
+                StartCoroutine(StartDig(space, diggable));
+                return true;
+            }
+        }
+
+        return false;
     }
 
-    IEnumerator AnimateDig(DiggableTile diggable) 
+    IEnumerator StartDig(GridSpace space, DiggableTile diggable) 
     {
         unit.isControllable = false;
 
@@ -30,7 +39,7 @@ public class Digger : MonoBehaviour
             diggable.Destroy();
             Mover mover = GetComponent<Mover>();
             if(mover != null) {
-                mover.Move(diggable.transform.position);
+                mover.Move(space);
             }
         }
         else {

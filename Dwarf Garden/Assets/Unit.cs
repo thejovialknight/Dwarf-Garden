@@ -21,8 +21,6 @@ public class Unit : MonoBehaviour
                 controller.ActivateNextUnit();
             }   
         }
-
-        
     }
 
     public bool Activate() {
@@ -39,22 +37,30 @@ public class Unit : MonoBehaviour
         isActive = false;
     }
 
-    public void Action(int x, int y, bool isSecondary) {
+    public void Action(int x, int y) {
         int xPos = (int)transform.position.x + x;
         int yPos = (int)transform.position.y + y;
 
-        if(!isControllable || !isActive) {
+        if(!isControllable || !isActive || TileManager.Instance.Space(xPos, yPos) == null) {
             return;
         }
 
-        if(TileManager.Instance.Space(xPos, yPos).Action(gameObject, controller, true)) {
-            isActionInProgress = true;
+        GridSpace space = TileManager.Instance.Space(xPos, yPos);
+
+        if(x != 0 || y != 0) {
+            Mover mover = GetComponent<Mover>();
+            Digger digger = GetComponent<Digger>();
+            if(mover != null && mover.Move(space)) {
+                isActionInProgress = true;
+            }
+            else if (digger != null && digger.Dig(space)){
+                isActionInProgress = true;
+            }
         }
 
         Input.ResetInputAxes();
     }
-
-    public void Action(int x, int y) {
-        Action(x, y, false);
-    }
 }
+
+
+// TileManager.Instance.Space(xPos, yPos).Action(gameObject, controller, true)

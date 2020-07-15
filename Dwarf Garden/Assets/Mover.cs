@@ -18,12 +18,18 @@ public class Mover : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    public void Move(Vector3 target) {
-        targetPos = target;
-        StartCoroutine(AnimateMovement());
+    public bool Move(GridSpace space) {
+        GameObject obj;
+        if(space.Action(ActionType.Move, out obj)) {
+            targetPos = space.Position();
+            StartCoroutine(StartMovement());
+            return true;
+        }
+
+        return false;
     }
 
-    IEnumerator AnimateMovement() 
+    IEnumerator StartMovement() 
     {
         unit.isControllable = false;
 

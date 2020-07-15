@@ -10,11 +10,11 @@ public class StoneTile : MonoBehaviour, IActable
         diggable = GetComponent<DiggableTile>();
     }
 
-    public bool Action(GameObject actor, PlayerController player, bool isSecondary) {
-        if(diggable.Dig(actor)) {
+    public bool Action(ActionType type) {
+        if(type == ActionType.Dig && diggable == true) {
             return true;
         }
-        
+
         return false;
     }
 }

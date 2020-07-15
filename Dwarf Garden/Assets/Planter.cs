@@ -14,11 +14,11 @@ public class Planter : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    public void Plant(PlantableTile plantable, ) {
-        StartCoroutine(AnimatePlant(plantable));
+    public void Plant(PlantableTile plantable) {
+        StartCoroutine(StartPlant(plantable));
     }
 
-    IEnumerator AnimatePlant(PlantableTile plantable) 
+    IEnumerator StartPlant(PlantableTile plantable) 
     {
         unit.isControllable = false;
 

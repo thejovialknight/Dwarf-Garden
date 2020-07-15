@@ -12,6 +12,7 @@ public class TileManager : MonoBehaviour
 
     public Grid grid;
     public List<TypeTilePair> placeableTiles = new List<TypeTilePair>();
+    static List<SeedTilePair> plantableSeeds = new List<SeedTilePair>(); 
 
     public static TileManager Instance;
 
@@ -53,6 +54,33 @@ public class TileManager : MonoBehaviour
             space = grid.AddSpace(x, y, new GridSpace(x, y, prefab));
         }
         return space;
+    }
+
+    public GridSpace PlaceSeed(int x, int y, SeedType seed)
+    {
+        GridSpace space = grid.Space(x, y);
+        GameObject prefab = GetSeedPrefab(seed);
+        if (space != null)
+        {
+            space.SetTile(prefab);
+        }
+        else
+        {
+            space = grid.AddSpace(x, y, new GridSpace(x, y, prefab));
+        }
+        return space;
+    }
+
+    public GameObject GetSeedPrefab(SeedType seed)
+    {
+        foreach(SeedTilePair pair in plantableSeeds)
+        {
+            if(pair.seed == seed)
+            {
+                return pair.prefab;
+            }
+        }
+        return null;
     }
 
     public GameObject GetTilePrefab(Tile tile)

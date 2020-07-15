@@ -10,6 +10,7 @@ public class TypeTilePair
 
     public TypeTilePair(Tile tile, GameObject prefab)
     {
-
+        this.tile = tile;
+        this.prefab = prefab;
     }
 }

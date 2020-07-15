@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SeedStorage : MonoBehaviour
 {
-    Dictionary<SeedType, int> seeds = new Dictionary<SeedType>();
+    Dictionary<SeedType, int> seeds = new Dictionary<SeedType, int>();
 
     public int Amount(SeedType type) {
         if(seeds.ContainsKey(type)) {
@@ -14,7 +14,7 @@ public class SeedStorage : MonoBehaviour
     }  
 
     public void Add(SeedType type, int amount) {
-        if(seeds.ContainsKey(type) {
+        if(seeds.ContainsKey(type)) {
             seeds[type] += amount;
         }
         else {

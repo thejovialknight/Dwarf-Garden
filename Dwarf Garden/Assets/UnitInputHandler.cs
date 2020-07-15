@@ -11,6 +11,10 @@ public class UnitInputHandler : MonoBehaviour
     }
 
     void Update() {
+        if(!unit.isControllable || !unit.isActive) {
+            return;
+        }
+
         if(Input.GetButtonDown("Up")) {
             unit.Action(0, 1);
         }
@@ -27,8 +31,8 @@ public class UnitInputHandler : MonoBehaviour
             unit.Action(-1, 0);
         }
 
-        if(Input.GetButtonDown("Secondary")) {
-            unit.Action(0, 0, true);
+        if(Input.GetButtonDown("Action")) {
+            unit.Action(0, 0);
         }
     }
 }
