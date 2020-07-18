@@ -67,24 +67,4 @@ public class GridSpace
 
         return false;
     }
-
-    /*
-    public bool Action(GameObject actor, PlayerController player) {
-        bool isSuccessful = false;
-        IActable actable;
-        if(entity != null) {
-            actable = entity.GetComponent<IActable>();
-            if(actable != null && actable.Action(actor, player)) {
-                return true;
-            }
-        }
-
-        actable = tile.GetComponent<IActable>();
-        if(actable != null && actable.Action(actor, player)) {
-            return true;
-        }
-
-        return isSuccessful;
-    }
-    */
 }

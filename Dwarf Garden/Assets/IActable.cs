@@ -10,5 +10,6 @@ public interface IActable
 
 public enum ActionType {
     Move,
-    Dig
+    Dig,
+    Plant
 }

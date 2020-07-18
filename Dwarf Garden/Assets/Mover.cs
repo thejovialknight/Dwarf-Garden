@@ -2,23 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mover : MonoBehaviour
+public class Mover : ActionController
 {
     public float speed;
 
-    Unit unit;
-    Animator animator;
-
     public Vector3 targetPos;
 
-    void Awake() {
-        targetPos = transform.position;
+    public override void Awake() {
+        base.Awake();
 
-        unit = GetComponent<Unit>();
-        animator = GetComponent<Animator>();
+        targetPos = transform.position;
     }
 
-    public bool Move(GridSpace space) {
+    public override bool Action(GridSpace space) {
         GameObject obj;
         if(space.Action(ActionType.Move, out obj)) {
             targetPos = space.Position();
@@ -39,6 +35,6 @@ public class Mover : MonoBehaviour
             yield return null;
         }
 
-        unit.isControllable = true;
+        unit.isControllable = true; 
     }
 }

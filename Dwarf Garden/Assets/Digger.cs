@@ -2,19 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Digger : MonoBehaviour
+public class Digger : ActionController
 {
     public float power = 1f;
 
-    Unit unit;
-    Animator animator;
-
-    void Awake() {
-        unit = GetComponent<Unit>();
-        animator = GetComponent<Animator>();
+    public override void Awake() {
+        base.Awake();
     }
 
-    public bool Dig(GridSpace space) {
+    public override bool Action(GridSpace space) {
         GameObject obj;
         if(space.Action(ActionType.Dig, out obj)) {
             DiggableTile diggable = obj.GetComponent<DiggableTile>();
@@ -39,7 +35,7 @@ public class Digger : MonoBehaviour
             diggable.Destroy();
             Mover mover = GetComponent<Mover>();
             if(mover != null) {
-                mover.Move(space);
+                mover.Action(space);
             }
         }
         else {

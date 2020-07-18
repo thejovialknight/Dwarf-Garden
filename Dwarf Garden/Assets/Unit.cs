@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
+    public List<ActionController> arrowActions = new List<ActionController>();
+    public List<ActionController> stationaryActions = new List<ActionController>();
+
     public bool isActive = false;
     public int actionLimit = 3;
     public int actionsTaken = 0;
@@ -48,19 +51,20 @@ public class Unit : MonoBehaviour
         GridSpace space = TileManager.Instance.Space(xPos, yPos);
 
         if(x != 0 || y != 0) {
-            Mover mover = GetComponent<Mover>();
-            Digger digger = GetComponent<Digger>();
-            if(mover != null && mover.Move(space)) {
-                isActionInProgress = true;
+            foreach(ActionController action in arrowActions) {
+                if(action.Action(space)) {
+                    isActionInProgress = true;
+                }
             }
-            else if (digger != null && digger.Dig(space)){
-                isActionInProgress = true;
+        }
+        else {
+            foreach(ActionController action in stationaryActions) {
+                if(action.Action(space)) {
+                    isActionInProgress = true;
+                }
             }
         }
 
         Input.ResetInputAxes();
     }
 }
-
-
-// TileManager.Instance.Space(xPos, yPos).Action(gameObject, controller, true)

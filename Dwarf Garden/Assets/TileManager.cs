@@ -12,7 +12,7 @@ public class TileManager : MonoBehaviour
 
     public Grid grid;
     public List<TypeTilePair> placeableTiles = new List<TypeTilePair>();
-    static List<SeedTilePair> plantableSeeds = new List<SeedTilePair>(); 
+    public List<SeedTilePair> plantableSeeds = new List<SeedTilePair>(); 
 
     public static TileManager Instance;
 
@@ -68,6 +68,7 @@ public class TileManager : MonoBehaviour
         {
             space = grid.AddSpace(x, y, new GridSpace(x, y, prefab));
         }
+        Debug.Log(space.tile);
         return space;
     }
 

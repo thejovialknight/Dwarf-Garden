@@ -4,5 +4,7 @@ using UnityEngine;
 
 public class PlantableTile : MonoBehaviour
 {
-    bool isPlantable = true;
+    public void Plant(SeedType seed) {
+        TileManager.Instance.PlaceSeed((int)transform.position.x, (int)transform.position.y, seed);
+    }
 }
