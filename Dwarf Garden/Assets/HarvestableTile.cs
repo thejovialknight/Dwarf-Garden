@@ -10,12 +10,27 @@ public class HarvestableTile : MonoBehaviour
     public int currentGrowth;
     public int maxGrowth;
 
+    public bool isFirstTurn = true;
+
+    void OnEnable() {
+        MatchManager.onTurnEnd += Grow;
+    }
+
+    void OnDisable() {
+        MatchManager.onTurnEnd -= Grow;
+    }
+
     public void Grow() {
-        currentGrowth++;
-        if(currentGrowth > maxGrowth) {
-            currentGrowth = maxGrowth;
+        if(isFirstTurn) {
+            isFirstTurn = false;
         }
-        spriteRenderer = growthSprites[currentGrowth];
+        else {
+            currentGrowth++;
+            if(currentGrowth > maxGrowth) {
+                currentGrowth = maxGrowth;
+            }
+        }
+        spriteRenderer.sprite = growthSprites[currentGrowth];
     }
 
     public void Harvest() {

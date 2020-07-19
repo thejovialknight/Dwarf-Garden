@@ -38,8 +38,26 @@ public class MatchManager : MonoBehaviour
         currentPlayer++;
         if(currentPlayer >= players.Count) {
             currentPlayer = 0;
+            RaiseOnTurnEnd();
         }
 
         players[currentPlayer].StartTurn();
+
+        RaiseOnTurnAdvance();
+    }
+
+    public delegate void OnTurn();
+    public static event OnTurn onTurnEnd;
+    public void RaiseOnTurnEnd() {
+        if (onTurnEnd != null) {
+            onTurnEnd();
+        }
+    }
+
+    public static event OnTurn onTurnAdvance;
+    public void RaiseOnTurnAdvance() {
+        if (onTurnAdvance != null) {
+            onTurnAdvance();
+        }
     }
 }
