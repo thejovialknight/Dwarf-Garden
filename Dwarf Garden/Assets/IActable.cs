@@ -7,9 +7,3 @@ public interface IActable
     //bool Action(GameObject actor, PlayerController player);
     bool Action(ActionType type);
 }
-
-public enum ActionType {
-    Move,
-    Dig,
-    Plant
-}

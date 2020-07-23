@@ -2,7 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveableTile : MonoBehaviour
+public class MoveableTile : ActableController
 {
-    
+    void Awake() {
+        action = ActionType.Move;
+    }
+
+    public override bool Action() {
+        return true;
+    }
 }

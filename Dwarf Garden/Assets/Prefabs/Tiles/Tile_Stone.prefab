@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3332966593177845645}
   - component: {fileID: -2365616224094557541}
   - component: {fileID: -4294241069852673784}
-  - component: {fileID: -1803231317351162454}
+  - component: {fileID: -7828724005615816908}
   - component: {fileID: 6622215659353847536}
   m_Layer: 0
   m_Name: Tile_Stone
@@ -71,7 +71,7 @@ MonoBehaviour:
   moisture: 0
   dryRenderer: {fileID: 3332966593983742904}
   moistRenderer: {fileID: 5581370585618434800}
---- !u!114 &-1803231317351162454
+--- !u!114 &-7828724005615816908
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -80,9 +80,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3332966593177845644}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 305e7bac3b7d1434f8087aef5a05201a, type: 3}
+  m_Script: {fileID: 11500000, guid: 29adb77873c3b5c4181f4ba8bbb75bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actables:
+  - {fileID: 6622215659353847536}
 --- !u!114 &6622215659353847536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,6 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd39a52acb7c4424da715c606a2f740e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  action: 3
+  maxHealth: 3
+  health: 3
 --- !u!1 &3332966593983742907
 GameObject:
   m_ObjectHideFlags: 0

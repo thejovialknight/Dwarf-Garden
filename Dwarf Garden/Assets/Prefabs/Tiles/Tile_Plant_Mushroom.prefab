@@ -173,6 +173,7 @@ GameObject:
   - component: {fileID: 3464855351953498733}
   - component: {fileID: 1496875025914246767}
   - component: {fileID: -5061452967113951623}
+  - component: {fileID: 6053846237899497925}
   - component: {fileID: -2084125659943485894}
   - component: {fileID: -8593397319400250206}
   m_Layer: 0
@@ -234,6 +235,21 @@ MonoBehaviour:
   moisture: 0
   dryRenderer: {fileID: 3464855351687536216}
   moistRenderer: {fileID: 6218129823077239753}
+--- !u!114 &6053846237899497925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3464855351953498732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29adb77873c3b5c4181f4ba8bbb75bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actables:
+  - {fileID: -2084125659943485894}
+  - {fileID: -8593397319400250206}
 --- !u!114 &-2084125659943485894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,6 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b60dbeadb534249adf2e487375542e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  action: 0
 --- !u!114 &-8593397319400250206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,6 +275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26934f8399ae72e4f9a89f87f45c1698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  action: 3
   growthSprites:
   - {fileID: -8486122387630847786, guid: 0cb56ad242f22984abf6109aca952ece, type: 3}
   - {fileID: -4415795664457646118, guid: 0cb56ad242f22984abf6109aca952ece, type: 3}
@@ -266,6 +284,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 2375265720765203471}
   currentGrowth: 0
   maxGrowth: 3
+  isFirstTurn: 1
 --- !u!1 &6358645466689664880
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,8 +352,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1391030281
+  m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: -8486122387630847786, guid: 0cb56ad242f22984abf6109aca952ece,
     type: 3}

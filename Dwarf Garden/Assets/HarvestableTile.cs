@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HarvestableTile : MonoBehaviour
+public class HarvestableTile : ActableController
 {
     public List<Sprite> growthSprites = new List<Sprite>();
     public SpriteRenderer spriteRenderer;
@@ -18,6 +18,14 @@ public class HarvestableTile : MonoBehaviour
 
     void OnDisable() {
         MatchManager.onTurnEnd -= Grow;
+    }
+
+    void Awake() {
+        action = ActionType.Harvest;
+    }
+
+    public override bool Action() {
+        return true;
     }
 
     public void Grow() {

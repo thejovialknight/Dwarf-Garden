@@ -22,7 +22,7 @@ public class Unit : MonoBehaviour
             if(actionsTaken >= actionLimit) {
                 Deactivate();
                 controller.ActivateNextUnit();
-            }   
+            }
         }
     }
 

@@ -12,8 +12,7 @@ public class MoistureController : MonoBehaviour
 
     void Start()
     {
-        Entity entity = GetComponent<Entity>();
-        space = TileManager.Instance.grid.Space(entity.x, entity.y);
+        space = TileManager.Instance.grid.Space(transform);
     }
 
     void Update()

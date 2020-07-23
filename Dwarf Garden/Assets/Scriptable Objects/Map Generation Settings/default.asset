@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61987b0f0e5b1c14bb06cabe9d2c58c8, type: 3}
   m_Name: default
   m_EditorClassIdentifier: 
-  width: 25
-  height: 25
+  width: 150
+  height: 150
   seedMultiplier: 0.5
   stoneChance: 0.4
   moistureScale: 0.5

@@ -173,8 +173,8 @@ GameObject:
   - component: {fileID: 3464855351953498733}
   - component: {fileID: 1496875025914246767}
   - component: {fileID: -5061452967113951623}
+  - component: {fileID: 5692108942857233908}
   - component: {fileID: -2084125659943485894}
-  - component: {fileID: 3692973806983144631}
   - component: {fileID: -1740426029258507586}
   m_Layer: 0
   m_Name: Tile_Ground
@@ -234,6 +234,21 @@ MonoBehaviour:
   moisture: 0
   dryRenderer: {fileID: 3464855351687536216}
   moistRenderer: {fileID: 6218129823077239753}
+--- !u!114 &5692108942857233908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3464855351953498732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29adb77873c3b5c4181f4ba8bbb75bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actables:
+  - {fileID: -2084125659943485894}
+  - {fileID: -1740426029258507586}
 --- !u!114 &-2084125659943485894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,18 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b60dbeadb534249adf2e487375542e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3692973806983144631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3464855351953498732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d345e315152f2c4d8f59fe0d5784ac6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  action: 0
 --- !u!114 &-1740426029258507586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,3 +274,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb3f7d82b0670d9478401a8ad01d6463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  action: 2

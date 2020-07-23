@@ -30,6 +30,11 @@ public class Grid
         return null;
     }
 
+    public GridSpace Space(Transform transform)
+    {
+        return Space((int)transform.position.x, (int)transform.position.y);
+    }
+
     public GridSpace AddSpace(int x, int y, GridSpace space)
     {
         grid[x, y] = space;

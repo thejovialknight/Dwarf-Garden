@@ -4,23 +4,43 @@ using UnityEngine;
 
 public class SeedStorage : MonoBehaviour
 {
-    Dictionary<SeedType, int> seeds = new Dictionary<SeedType, int>();
+    List<InventorySeed> seeds = new List<InventorySeed>();
 
     public int Amount(SeedType type) {
-        if(seeds.ContainsKey(type)) {
-            return seeds[type];
+        foreach(InventorySeed seed in seeds) {
+            if(seed.type == type) {
+                return seed.amount;
+            }
         }
+
         return 0;
     }  
 
     public void Add(SeedType type, int amount) {
-        if(seeds.ContainsKey(type)) {
-            seeds[type] += amount;
+        foreach(InventorySeed seed in seeds) {
+            if(seed.type == type) {
+                seed.amount += amount;
+                return;
+            }
         }
-        else {
-            seeds.Add(type, amount);
-        }
+
+        seeds.Add(new InventorySeed(type, amount));
     }       
+
+    public void Remove(SeedType type, int amount) {
+        for (int i = seeds.Count - 1; i >= 0; i--) {
+            InventorySeed seed = seeds[i];
+            if(seed.type == type) {
+                seed.amount -= amount;
+                if(seed.amount <= 0) {
+                    seeds.RemoveAt(i);
+                }
+                return;
+            }
+        }
+
+        Debug.Log("Can't remove that which is not there the seedling...");
+    }     
 }
 
 public enum SeedType {
