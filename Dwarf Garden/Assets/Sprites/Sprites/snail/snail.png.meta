@@ -99,7 +99,7 @@ TextureImporter:
       213: -417474240353900398
     second: snail_31
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -119,6 +119,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -128,8 +130,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -150,9 +152,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -863,6 +869,39 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      snail_28: -4793253870841049159
+      snail_30: -2143052639490261632
+      snail_9: 5833146356351957236
+      snail_11: 7393546466061670553
+      snail_29: -8939120788194875213
+      snail_27: 2827859809855835115
+      snail_5: 3808247924026382544
+      snail_8: 8360770552865230070
+      snail_25: -8526359995750482414
+      snail_18: 3693473625958967681
+      snail_4: -214144466214940509
+      snail_16: -492441712321222643
+      snail_23: -4091160229382394925
+      snail_31: -417474240353900398
+      snail_19: -3807070004352706882
+      snail_6: 1570131750554135308
+      snail_0: -6207193392188836992
+      snail_20: 4899947777980495883
+      snail_12: 4808341636810824395
+      snail_26: -582864105960106378
+      snail_10: -404309704943796197
+      snail_15: 6513559001761545995
+      snail_17: -3443688358932414120
+      snail_1: -2892910820977171364
+      snail_22: -2158805706229065780
+      snail_13: -1601571408978823205
+      snail_2: -3278524096712110203
+      snail_14: 8973212966699452106
+      snail_3: 8991455535210373810
+      snail_7: 7908504283364804799
+      snail_21: -4359103243530762389
+      snail_24: -5109263301758293176
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

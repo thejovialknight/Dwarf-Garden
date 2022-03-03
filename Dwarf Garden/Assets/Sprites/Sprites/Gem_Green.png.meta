@@ -42,7 +42,7 @@ TextureImporter:
       213: -4025673083711964231
     second: Gem_Green_12
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -62,6 +62,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -71,8 +73,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -93,9 +95,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -407,6 +413,20 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Gem_Green_8: -2915739035011616267
+      Gem_Green_0: 4654838420489368577
+      Gem_Green_3: -2989529711561362406
+      Gem_Green_12: -4025673083711964231
+      Gem_Green_1: -6343210352804095865
+      Gem_Green_9: -5675260120811053472
+      Gem_Green_5: 6808053709354443450
+      Gem_Green_10: -6105031409045832047
+      Gem_Green_7: 6866660727712044068
+      Gem_Green_4: 3826004799813544561
+      Gem_Green_11: 6720574082614767639
+      Gem_Green_6: -1686367097123230074
+      Gem_Green_2: -8806811291607311834
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

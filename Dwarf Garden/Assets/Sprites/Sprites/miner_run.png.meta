@@ -147,7 +147,7 @@ TextureImporter:
       213: 5087502191944299649
     second: miner_run_47
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -167,6 +167,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -176,8 +178,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -198,9 +200,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -1247,6 +1253,55 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      miner_run_32: 1187091157209633897
+      miner_run_21: -4266855329008635615
+      miner_run_2: -7825081369150869795
+      miner_run_22: 6942502323259426691
+      miner_run_1: 7818805285948791090
+      miner_run_11: -3078788199352779782
+      miner_run_31: 7566778901659297032
+      miner_run_13: 8531811263422591718
+      miner_run_39: 446751641722582456
+      miner_run_16: 4430934581573226553
+      miner_run_23: -8008135538154565390
+      miner_run_42: 3819552245364669577
+      miner_run_47: 5087502191944299649
+      miner_run_26: 4100333408509719851
+      miner_run_20: -9115244520887211233
+      miner_run_44: 700533672718949220
+      miner_run_12: -3182069458196289037
+      miner_run_33: 5715535740226854180
+      miner_run_24: -6983525715109891195
+      miner_run_4: -1932884312245469073
+      miner_run_0: -258973114110545378
+      miner_run_5: -3101499214151864487
+      miner_run_27: -5493506944113499173
+      miner_run_46: -6333233252423145248
+      miner_run_8: 5660476384810411506
+      miner_run_6: 2725841276112104334
+      miner_run_3: -3155756002339427954
+      miner_run_19: 5138052018750724326
+      miner_run_7: -2075208773612744406
+      miner_run_37: 7201413015313106116
+      miner_run_35: 4840308579195173757
+      miner_run_45: 1420698099563090714
+      miner_run_9: 6531929860410049179
+      miner_run_40: -305585573192324565
+      miner_run_14: -1556089167785077835
+      miner_run_38: 1179111518430584619
+      miner_run_30: 5254432550332780762
+      miner_run_15: 9165254187705705776
+      miner_run_10: 7350416864841819530
+      miner_run_36: 2410292201264620414
+      miner_run_18: 4446278501490357679
+      miner_run_28: 3492336999334234260
+      miner_run_17: 8383373355428491194
+      miner_run_41: 7114637962888240845
+      miner_run_25: 7877538009729868352
+      miner_run_43: -6427925541178720234
+      miner_run_29: -6504980300615783534
+      miner_run_34: 3011609296480032656
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

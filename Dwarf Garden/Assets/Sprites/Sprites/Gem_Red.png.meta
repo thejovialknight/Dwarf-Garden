@@ -42,7 +42,7 @@ TextureImporter:
       213: 8191320719001241419
     second: Gem_Red_12
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -62,6 +62,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -71,8 +73,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -93,9 +95,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -407,6 +413,20 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Gem_Red_7: -7652740927129524349
+      Gem_Red_8: -6917497344935479019
+      Gem_Red_5: 108279946466992861
+      Gem_Red_12: 8191320719001241419
+      Gem_Red_4: 4084398076295378082
+      Gem_Red_9: -9213013756685281917
+      Gem_Red_11: 5137808325738318853
+      Gem_Red_3: 3335414009771125790
+      Gem_Red_2: -4881599661888210745
+      Gem_Red_10: 5533858226829921239
+      Gem_Red_1: -2355659908716449588
+      Gem_Red_6: -4238582577154280079
+      Gem_Red_0: 1056604723175548609
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

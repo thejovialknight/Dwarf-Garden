@@ -147,7 +147,7 @@ TextureImporter:
       213: -584081001466523501
     second: miner1_upgrade_47
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -167,6 +167,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -176,8 +178,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -198,9 +200,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -1247,6 +1253,55 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      miner1_upgrade_37: -7466953120403310405
+      miner1_upgrade_16: 700776807049510213
+      miner1_upgrade_47: -584081001466523501
+      miner1_upgrade_0: -4386004365379532210
+      miner1_upgrade_35: 9107071319312144721
+      miner1_upgrade_6: -58261629936458152
+      miner1_upgrade_15: 4486739208945943773
+      miner1_upgrade_9: -8186311610284507015
+      miner1_upgrade_42: -6832214142343452883
+      miner1_upgrade_11: -6977312589935860880
+      miner1_upgrade_7: -933015277443876001
+      miner1_upgrade_32: -3549739746502035584
+      miner1_upgrade_23: -8484552377174912664
+      miner1_upgrade_2: -7463303025927619460
+      miner1_upgrade_12: -3230530804836229089
+      miner1_upgrade_39: -4071690566540142134
+      miner1_upgrade_26: -5296125992896605111
+      miner1_upgrade_43: 8698723113299330914
+      miner1_upgrade_38: 3856637957638215494
+      miner1_upgrade_13: -7857060569244032675
+      miner1_upgrade_34: -8259495011414963611
+      miner1_upgrade_10: 1723611194658602126
+      miner1_upgrade_28: -7990133221929766947
+      miner1_upgrade_36: 5196216960164432022
+      miner1_upgrade_30: -6140299290059892075
+      miner1_upgrade_41: 4224612836123048398
+      miner1_upgrade_24: -8302165545569122093
+      miner1_upgrade_4: 2513171188846314026
+      miner1_upgrade_20: 3890500886089489492
+      miner1_upgrade_25: -1512898451847605134
+      miner1_upgrade_46: -6118264063739736356
+      miner1_upgrade_8: -8203078039525867798
+      miner1_upgrade_40: -5937352673310042554
+      miner1_upgrade_21: 2597259728562275379
+      miner1_upgrade_27: 2687471639937871917
+      miner1_upgrade_29: -4359172231853555676
+      miner1_upgrade_17: 5209771736080946978
+      miner1_upgrade_44: -1911657154244219486
+      miner1_upgrade_18: 3315783115305775591
+      miner1_upgrade_5: 4286040599130325392
+      miner1_upgrade_22: 8056988890636162405
+      miner1_upgrade_19: 6931071028090817568
+      miner1_upgrade_14: -2127080603294015660
+      miner1_upgrade_33: 6962328843518505201
+      miner1_upgrade_3: -7427035182314009325
+      miner1_upgrade_31: -3474824439647609343
+      miner1_upgrade_1: 2986482463262709626
+      miner1_upgrade_45: -5147384264558066742
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
